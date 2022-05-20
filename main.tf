@@ -86,7 +86,7 @@ module "coolsox" {
     kubernetes = {
       repository                = "public.ecr.aws/j8r8c0y6/coolsox"
       image_pull_policy         = "Always"
-      read_only_root_filesystem = true
+      read_only_root_filesystem = false # breaks AppD Java Agents?
     }
     carts = {
       version   = "1.0.0"
