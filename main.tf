@@ -62,6 +62,7 @@ module "coolsox" {
       name = "coolsox-rw"
     }
     account = {
+      host          = format("%s.saas.appdynamics.com", var.appd_account_name)
       name          = var.appd_account_name       # Passed from Workspace Variable
       key           = var.appd_account_key        # Passed from Workspace Variable
       otel_api_key  = var.appd_otel_api_key       # Passed from Workspace Variable
@@ -74,10 +75,11 @@ module "coolsox" {
   }
 
   helm = {
-    namespace   = "coolsox"
-    repository  = "https://github.com/cisco-apjc-cloud-se/app-fso-coolsox/raw/main/application/helm/"
-    chart       = "coolsox"
-    version     = "0.0.1"
+    namespace     = "coolsox"
+    release_name  = "coolsox"
+    repository    = "https://github.com/cisco-apjc-cloud-se/app-fso-coolsox/raw/main/application/helm/"
+    chart         = "coolsox"
+    version       = "0.0.1"
   }
 
   settings = {
