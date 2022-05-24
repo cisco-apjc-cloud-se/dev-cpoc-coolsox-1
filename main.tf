@@ -106,6 +106,7 @@ module "coolsox" {
       appd_browser_rum_enabled = false
       ingress = {
         enabled = true
+        url = "fso-demo-app.cisco.com"
       }
       loadbalancer = {
         enabled = false
