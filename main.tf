@@ -88,6 +88,7 @@ module "coolsox" {
     repository    = "https://github.com/cisco-apjc-cloud-se/app-fso-coolsox/raw/main/application/helm/"
     chart         = "coolsox"
     version       = "0.2.0" # In Helm Chart!
+    wait          = false
   }
 
   settings = {
