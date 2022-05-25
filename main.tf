@@ -70,7 +70,15 @@ module "coolsox" {
       password      = var.appd_account_password   # Passed from Workspace Variable
     }
     db_agent = {
-      enabled = false
+      enabled     = true
+      name        = "coolsox-dbagent"
+      databases   = {
+        mongodb = {
+          name = "mongodb"
+          user = "appdagent"
+          password = var.appd_account_password
+        }
+      }
     }
   }
 
