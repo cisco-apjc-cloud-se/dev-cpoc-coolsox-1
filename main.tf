@@ -89,6 +89,7 @@ module "coolsox" {
     chart         = "coolsox"
     version       = "0.2.0" # In Helm Chart!
     wait          = false
+    timeout       = 900
   }
 
   settings = {
