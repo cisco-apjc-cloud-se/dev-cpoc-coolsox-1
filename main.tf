@@ -172,21 +172,21 @@ module "thousandeyes_tests" {
   source = "github.com/cisco-apjc-cloud-se/terraform-thousandeyes-tests"
 
   http_tests = {
-    frontend = {
-      name = "cpoc-coolsox-frontend"
-      url = "http://fso-demo-app.cisco.com"
-
-      ## NOTE: Due to bug with provider, initial test MUST be configured first with network_measurements = false, this can then be to true in a 2nd run
-      network_measurements = true
-      agents = [
-        "Auckland, New Zealand",
-        "Brisbane, Australia",
-        "Melbourne, Australia",
-        "Melbourne, Australia (Azure australiasoutheast)",
-        "Perth, Australia",
-        "Sydney, Australia",
-        "Wellington, New Zealand"
-      ]
-    }
+    # frontend = {
+    #   name = "cpoc-coolsox-frontend"
+    #   url = "http://fso-demo-app.cisco.com"
+    #
+    #   ## NOTE: Due to bug with provider, initial test MUST be configured first with network_measurements = false, this can then be to true in a 2nd plan
+    #   network_measurements = false
+    #   agents = [
+    #     "Auckland, New Zealand",
+    #     "Brisbane, Australia",
+    #     "Melbourne, Australia",
+    #     "Melbourne, Australia (Azure australiasoutheast)",
+    #     "Perth, Australia",
+    #     "Sydney, Australia",
+    #     "Wellington, New Zealand"
+    #   ]
+    # }
   }
 }
