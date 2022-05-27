@@ -179,7 +179,9 @@ module "thousandeyes_tests" {
 
       ## NOTE: Due to bug with provider, initial test MUST be configured first with network_measurements = false, this can then be to true in a 2nd plan
       # network_measurements enables other options, defaults to true
-      network_measurements = false
+      network_measurements    = false
+      # mtu_measurements        = true
+      # bgp_measurements        = true
       agents = [
         "Auckland, New Zealand",
         "Brisbane, Australia",
@@ -191,4 +193,8 @@ module "thousandeyes_tests" {
       ]
     }
   }
+}
+
+output "test" {
+  value = module.thousandeyes_tests.test
 }
