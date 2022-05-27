@@ -13,6 +13,9 @@ terraform {
     kubernetes = {
       source = "hashicorp/kubernetes"
     }
+    thousandeyes = {
+      source = "william20111/thousandeyes"
+    }
   }
 }
 
