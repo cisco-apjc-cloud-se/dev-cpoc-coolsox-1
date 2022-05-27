@@ -52,6 +52,10 @@ provider "helm" {
   }
 }
 
+provider "thousandeyes" {
+  token = var.te_token # Passed from Workspace Variable
+}
+
 module "coolsox" {
   source = "github.com/cisco-apjc-cloud-se/terraform-helm-coolsox"
   smm_enabled = true
