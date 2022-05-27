@@ -163,6 +163,7 @@ module "coolsox" {
 }
 
 module "thousandeyes_tests" {
+  ### NOTE:  Requires any Cloud Agents to have access to api.thousandeyes.com ###
   source = "github.com/cisco-apjc-cloud-se/terraform-thousandeyes-tests"
 
   http_tests = {
