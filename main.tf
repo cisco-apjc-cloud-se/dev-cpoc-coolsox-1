@@ -175,7 +175,9 @@ module "thousandeyes_tests" {
     frontend = {
       name = "cpoc-coolsox-frontend"
       url = "http://fso-demo-app.cisco.com"
-      network_measurements = false
+
+      ## NOTE: Due to bug with provider, initial test MUST be configured first with network_measurements = false, this can then be to true in a 2nd run
+      network_measurements = true
       agents = [
         "Auckland, New Zealand",
         "Brisbane, Australia",
