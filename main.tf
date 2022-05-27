@@ -59,6 +59,9 @@ provider "thousandeyes" {
   token = var.te_token # Passed from Workspace Variable
 }
 
+
+### Deploy application via Helm through custom module ###
+
 module "coolsox" {
   source = "github.com/cisco-apjc-cloud-se/terraform-helm-coolsox"
   smm_enabled = true
@@ -161,6 +164,8 @@ module "coolsox" {
   }
 
 }
+
+### Add Monitoring from ThousandEyes to Public URL ###
 
 module "thousandeyes_tests" {
   ### NOTE:  Requires any Cloud Agents to have access to api.thousandeyes.com ###
