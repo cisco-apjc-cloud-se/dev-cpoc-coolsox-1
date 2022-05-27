@@ -173,15 +173,13 @@ module "thousandeyes_tests" {
 
   http_tests = {
     frontend = {
-      enabled = true
+      enabled = true # BUG: Can only be true.  Need to disable in GUI
       name = "cpoc-coolsox-frontend"
       url = "http://fso-demo-app.cisco.com"
 
-      ## NOTE: Due to bug with provider, initial test MUST be configured first with network_measurements = false, this can then be to true in a 2nd plan
-      # network_measurements enables other options, defaults to true
-      network_measurements    = true
-      mtu_measurements        = false
-      bgp_measurements        = false
+      network_measurements    = true  # BUG: Can only be true.  Need to disable in GUI
+      mtu_measurements        = true  # BUG: Can only be true.  Need to disable in GUI
+      bgp_measurements        = true  # BUG: Can only be true.  Need to disable in GUI
       agents = [
         "Auckland, New Zealand",
         "Brisbane, Australia",
