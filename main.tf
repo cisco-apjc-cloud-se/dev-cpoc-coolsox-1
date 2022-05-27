@@ -175,6 +175,7 @@ module "thousandeyes_tests" {
     frontend = {
       name = "cpoc-coolsox-frontend"
       url = "http://fso-demo-app.cisco.com"
+      network_measurements = false
       agents = [
         "Auckland, New Zealand",
         "Brisbane, Australia",
