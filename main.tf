@@ -165,34 +165,34 @@ module "coolsox" {
 
 }
 
-### Add Monitoring from ThousandEyes to Public URL ###
-
-module "thousandeyes_tests" {
-  ### NOTE:  Requires any Cloud Agents to have access to api.thousandeyes.com ###
-  source = "github.com/cisco-apjc-cloud-se/terraform-thousandeyes-tests"
-
-  http_tests = {
-    frontend = {
-      enabled = true # BUG: Can only be true.  Need to disable in GUI
-      name = "cpoc-coolsox-frontend"
-      url = "http://fso-demo-app.cisco.com"
-
-      network_measurements    = true  # BUG: Can only be true.  Need to disable in GUI
-      mtu_measurements        = true  # BUG: Can only be true.  Need to disable in GUI
-      bgp_measurements        = true  # BUG: Can only be true.  Need to disable in GUI
-      agents = [
-        "Auckland, New Zealand",
-        "Brisbane, Australia",
-        "Melbourne, Australia",
-        "Melbourne, Australia (Azure australiasoutheast)",
-        "Perth, Australia",
-        "Sydney, Australia",
-        "Wellington, New Zealand"
-      ]
-    }
-  }
-}
-
-output "test" {
-  value = module.thousandeyes_tests.test
-}
+# ### Add Monitoring from ThousandEyes to Public URL ###
+#
+# module "thousandeyes_tests" {
+#   ### NOTE:  Requires any Cloud Agents to have access to api.thousandeyes.com ###
+#   source = "github.com/cisco-apjc-cloud-se/terraform-thousandeyes-tests"
+#
+#   http_tests = {
+#     frontend = {
+#       enabled = true # BUG: Can only be true.  Need to disable in GUI
+#       name = "cpoc-coolsox-frontend"
+#       url = "http://fso-demo-app.cisco.com"
+#
+#       network_measurements    = true  # BUG: Can only be true.  Need to disable in GUI
+#       mtu_measurements        = true  # BUG: Can only be true.  Need to disable in GUI
+#       bgp_measurements        = true  # BUG: Can only be true.  Need to disable in GUI
+#       agents = [
+#         "Auckland, New Zealand",
+#         "Brisbane, Australia",
+#         "Melbourne, Australia",
+#         "Melbourne, Australia (Azure australiasoutheast)",
+#         "Perth, Australia",
+#         "Sydney, Australia",
+#         "Wellington, New Zealand"
+#       ]
+#     }
+#   }
+# }
+#
+# output "test" {
+#   value = module.thousandeyes_tests.test
+# }
