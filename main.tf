@@ -163,7 +163,7 @@ module "coolsox" {
     load_test = {
       enabled       = true
       version       = "1.0.0"
-      replicas      = 1
+      replicas      = 2
     }
   }
 
